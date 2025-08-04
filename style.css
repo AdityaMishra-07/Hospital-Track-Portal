@@ -1,0 +1,229 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #0f172a, #1e3a8a);
+    padding: 1.4rem;
+}
+
+
+/* Heading */
+h1 {
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 1rem;
+    margin-bottom: 4.5rem;
+    color: #cffafe;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+/* div that contain from, table */
+body>div {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    gap: 1.8rem;
+    flex-wrap: wrap;
+    max-width: 85rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+form {
+    flex: 1;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 448px;
+    color: #ffffff;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(16px);
+    /* For Safari */
+    backdrop-filter: blur(16px);
+    /* For others */
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+}
+
+.custom-input {
+    margin-bottom: 0;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.custom-input::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Focus styles */
+.custom-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #22d3ee;
+
+}
+
+/* Style the dropdown arrow on some browsers */
+#dept option {
+    background-color: rgba(30, 41, 59, 0.9);
+    color: #ffffff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    background-color: #06b6d4;
+    color: #ffffff;
+    font-weight: 600;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    border-radius: 9999px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    border: none;
+    margin-top: 1.5rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #0891b2;
+}
+
+/* Table */
+table {
+    flex: 2;
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    color: #1f2937;
+    border-radius: 0.75rem;
+    overflow: hidden;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+table th,
+table td {
+    border: 1px solid #e0e6ec;
+    padding: 14px;
+    text-align: center;
+    font-size: 1rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+        0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+table th {
+    background-color: #0e7490;
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    text-transform: uppercase;
+}
+
+table tr:nth-child(even) {
+    background-color: #ebf1f7;
+}
+
+table tr:hover {
+    background-color: #d7eafa;
+}
+
+/* Delete Button */
+.delete-btn {
+    background-color: #eb3a40;
+    color: #ffffff;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.375rem;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    transition: background-color 0.2s ease-in-out;
+
+
+}
+
+.delete-btn:hover {
+    background-color: #c51f1f;
+}
+
+.button-container {
+    display: flex;
+    justify-content: right;
+    margin-top: 20px;
+    padding: 0 20px;
+}
+
+.download-btn {
+    background-color: #06b6d4;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.download-btn:hover {
+    background-color: #0891b2;
+}
+
+/* Responsive: Mobile Stacked Layout */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    body>div {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    form {
+        width: 95%;
+    }
+
+    table {
+        display: block;
+        overflow-x: auto;
+        width: 95%;
+        min-width: unset;
+        margin: 0 auto;
+        white-space: nowrap;
+    }
+
+    .button-container {
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .download-btn {
+        width: 90%;
+        max-width: 300px;
+        font-size: 1rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+}
