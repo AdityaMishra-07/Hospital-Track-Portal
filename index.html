@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital app</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Dont make any changes here -->
+    <h1>Hospital-Doctor Records</h1>
+
+    <div>
+        <!-- ***** We are using form here  ****  -->
+        <form>
+            <label for="">Doctor Name</label><br />
+            <input id="name" class="custom-input" type="text" placeholder="Enter Doctor Name" required /><br />
+
+            <label for="">Doctor ID</label><br />
+            <input id="docID" class="custom-input" type="number" placeholder="Enter Doctor ID" required /><br />
+
+            <label for="">Specialization </label><br />
+            <select id="dept" class="custom-input" required>
+                <option value="">Select Specialization</option>
+                <option value="Dermatologist">Dermatologist</option>
+                <option value="ENT">ENT</option>
+                <option value="Dentist">Dentist</option>
+                <option value="COVID">COVID</option>
+                <option value="Gynecologist">Gynecologist</option>
+                <option value="Endocrinology & Metabolism">Endocrinology & Metabolism</option>
+                <option value="General Medicine">General Medicine</option>
+            </select><br />
+
+            <label for="">Experience </label><br />
+            <input id="exp" class="custom-input" type="number" placeholder="Experience in Years" required /><br />
+
+            <label for="">Email Address </label><br />
+            <input type="email" class="custom-input" id="email" placeholder="Enter Email Address" required /><br />
+
+            <label for="">Mobile Number </label><br />
+            <input id="mbl" class="custom-input" type="number" placeholder="Enter Mobile number" required /><br />
+
+            <input type="submit" class="custom-input" required />
+        </form>
+
+        <table>
+            <!-- Dont change order of columns -->
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Doctor ID</th>
+                    <th>Specialization</th>
+                    <th>Experience in years</th>
+                    <th>Email address</th>
+                    <th>Mobile Number</th>
+                    <th>Role</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ******* Append your output here ********* -->
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <!-- downlaod csv -->
+    <div class="button-container">
+        <button class="download-btn" onclick="download()">⬇️ Download CSV</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
